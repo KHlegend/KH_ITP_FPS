@@ -9,6 +9,8 @@ public class Hold_Object : MonoBehaviour
     public GameObject ball;
     public Transform guide;
 
+    public bool keyActive = false;
+
     // Use this for initialization
     void Start()
     {

@@ -13,11 +13,18 @@ public class DoorOpen : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void onTriggerStay ()
+	void OnTriggerStay (Collider other)
     {
-        if (Input.GetKey(KeyCode.O))
+        Debug.Log(other.gameObject.name.ToString());
+        if (other.gameObject.GetComponent<Hold_Object>() != null)
         {
-            doorhere.Play();
+            if (Input.GetKey(KeyCode.O) && other.gameObject.GetComponent<Hold_Object>().keyActive != false)
+            {
+
+                doorhere.Play();
+                other.gameObject.GetComponent<Hold_Object>().keyActive = false;
+
+            }
         }
 	}
 }

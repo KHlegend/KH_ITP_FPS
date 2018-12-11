@@ -11,6 +11,10 @@ public class Player_Shoot : MonoBehaviour
     [SerializeField]
     private float BulletSpeed;
 
+    
+
+    public GameObject respawnSpot;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -52,4 +56,14 @@ public class Player_Shoot : MonoBehaviour
         Bullet.GetComponent<Bullet>().BulletSetup("Target");
         Bullet.GetComponent<Rigidbody>().velocity = BulletSpawnPoint.forward*BulletSpeed;// this line applies velocity in the direction that the spawn point is facing
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Death>() != null)
+        {
+            transform.parent.position = respawnSpot.transform.position;
+        }
+    }
+
+    
 }
