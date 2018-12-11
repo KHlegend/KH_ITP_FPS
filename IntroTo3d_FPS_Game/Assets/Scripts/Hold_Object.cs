@@ -55,7 +55,7 @@ public class Hold_Object : MonoBehaviour
         ball.transform.SetParent(guide);
         ball.GetComponent<Rigidbody>().useGravity = false;
         //ball.GetComponent<Rigidbody>().velocity = Vector3.zero;
-
+        ball.GetComponent<BoxCollider>().isTrigger = true;
         ball.transform.localRotation = transform.rotation;
         ball.transform.position = guide.position;
 
@@ -68,6 +68,7 @@ public class Hold_Object : MonoBehaviour
         if (!ball)
             return;
 
+        ball.GetComponent<BoxCollider>().isTrigger = false;
         ball.GetComponent<Rigidbody>().useGravity = true;
         ball.GetComponent<Rigidbody>().velocity = transform.forward * speed;
        

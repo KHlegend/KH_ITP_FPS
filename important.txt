@@ -1,0 +1,25 @@
+khale@SC-PR-18-005 MINGW64 /
+ssh-keygen -t rsa -b 4096 -C "email\"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/khale/.ssh/id_rsa):
+Created directory '/c/Users/khale/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/khale/.ssh/id_rsa.
+Your public key has been saved in /c/Users/khale/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:ZwvFfU/peZKukJTz/DKOtIZA5IpCNSUWDZyE93o4BZk kennyhale4949@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|  +*O.           |
+| ..E...  . .    .|
+|  o +o    o . ...|
+| .   oo  . . ..+.|
+|.  .+o  S *   ooo|
+|. .+...  = * . ..|
+| .  o  . .= o .  |
+|        ...+oo   |
+|         .o.oo.  |
++----[SHA256]-----+
+
+khale@SC-PR-18-005 MINGW64 /
