@@ -18,7 +18,7 @@ public class DoorOpen : MonoBehaviour
         Debug.Log(other.gameObject.name.ToString());
         if (other.gameObject.GetComponent<Hold_Object>() != null)
         {
-            if (Input.GetKey(KeyCode.O) && other.gameObject.GetComponent<Hold_Object>().keyActive != false)
+            if (Input.GetKey(KeyCode.Q) && other.gameObject.GetComponent<Hold_Object>().keyActive != false)
             {
 
                 doorhere.Play();
